@@ -50,12 +50,7 @@
               />
             </div>
             <div>
-              <button
-                class="text-white w-full px-5 py-2 font-medium rounded text-sm bg-green-600"
-                type="submit"
-              >
-                Log In
-              </button>
+              <app-btn [typeBtn]="'submit'" colorBtn="success">Log In</app-btn>
             </div>
           </form>
         </div>
@@ -63,12 +58,14 @@
           class="pt-4 pb-2 flex justify-center items-center flex-col md:flex-row gap-x-2 text-sm"
         >
           <li>
-            <a href="#" class="text-blue-500 hover:underline">Can't log in?</a>
+            <a routerLink="#" class="text-blue-500 hover:underline"
+              >Can't log in?</a
+            >
           </li>
           <span class="hidden sm:block">&bull;</span>
           <li>
             <span class="md:hidden">&bull;</span>
-            <a href="#" class="text-blue-500 hover:underline">
+            <a routerLink="#" class="text-blue-500 hover:underline">
               Sign up for an account
             </a>
           </li>
@@ -77,11 +74,13 @@
       <div class="text-xs">
         <ul class="pt-4 pb-2 flex justify-center gap-x-2">
           <li>
-            <a href="#" class="text-blue-500 hover:underline">Privacy Policy</a>
+            <a routerLink="#" class="text-blue-500 hover:underline"
+              >Privacy Policy</a
+            >
           </li>
           &bull;
           <li>
-            <a href="#" class="text-blue-500 hover:underline">
+            <a routerLink="#" class="text-blue-500 hover:underline">
               Terms of Service
             </a>
           </li>
@@ -98,28 +97,32 @@
         />
         <ul class="pt-4 pb-2 w-full text-center text-sm">
           <li class="inline-block mx-2">
-            <a href="#" class="text-gray-400 hover:underline">Templates</a>
+            <a routerLink="#" class="text-gray-400 hover:underline"
+              >Templates</a
+            >
           </li>
           <li class="inline-block mx-2">
-            <a href="#" class="text-gray-400 hover:underline">Pricing</a>
+            <a routerLink="#" class="text-gray-400 hover:underline">Pricing</a>
           </li>
           <li class="inline-block mx-2">
-            <a href="#" class="text-gray-400 hover:underline">Apps</a>
+            <a routerLink="#" class="text-gray-400 hover:underline">Apps</a>
           </li>
           <li class="inline-block mx-2">
-            <a href="#" class="text-gray-400 hover:underline">Jobs</a>
+            <a routerLink="#" class="text-gray-400 hover:underline">Jobs</a>
           </li>
           <li class="inline-block mx-2">
-            <a href="#" class="text-gray-400 hover:underline">Blog</a>
+            <a routerLink="#" class="text-gray-400 hover:underline">Blog</a>
           </li>
           <li class="inline-block mx-2">
-            <a href="#" class="text-gray-400 hover:underline">Developers</a>
+            <a routerLink="#" class="text-gray-400 hover:underline"
+              >Developers</a
+            >
           </li>
           <li class="inline-block mx-2">
-            <a href="#" class="text-gray-400 hover:underline">About</a>
+            <a routerLink="#" class="text-gray-400 hover:underline">About</a>
           </li>
           <li class="inline-block mx-2">
-            <a href="#" class="text-gray-400 hover:underline">Help</a>
+            <a routerLink="#" class="text-gray-400 hover:underline">Help</a>
           </li>
         </ul>
       </footer>
