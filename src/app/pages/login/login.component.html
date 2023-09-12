@@ -11,46 +11,109 @@
       alt="bg right"
     />
   </div>
-  <div class="relative w-4/12 m-auto">
-    <header class="pt-6 pb-2 flex justify-center">
-      <img
-        class="w-56"
-        src="/assets/images/logo/logo-gradient-blue-trello.png"
-        alt="logo"
-      />
-    </header>
-    <div class="bg-white rounded shadow py-4 px-6">
-      <div class="mb-4">
-        <h1 class="text-center font-semibold pt-4 pb-8">Log In to Trello</h1>
-        <form novalidate class="space-y-4">
-          <div class="relative">
-            <input
-              class="w-full rounded bg-gray-100 border-2 border-gray-300"
-              placeholder="Enter email"
-              type="email"
-              name="email"
-              id="email"
-            />
-          </div>
-          <div class="relative">
-            <input
-              class="w-full rounded bg-gray-100 border-2 border-gray-300"
-              placeholder="Enter password"
-              type="password"
-              name="password"
-              id="password"
-            />
-          </div>
-          <div>
-            <button
-              class="text-white w-full px-5 py-2 font-medium rounded text-sm bg-green-700"
-              type="submit"
-            >
-              Log In
-            </button>
-          </div>
-        </form>
+  <div class="relative w-4/12 h-full m-auto divide-y divide-gray-300">
+    <div class="pt-6 pb-2 h-5/6">
+      <header class="flex justify-center">
+        <img
+          class="w-56"
+          src="/assets/images/logo/logo-gradient-blue-trello.png"
+          alt="logo"
+        />
+      </header>
+      <div
+        class="bg-white rounded shadow pt-4 pb-8 px-10 divide-y divide-gray-300"
+      >
+        <div class="mb-6">
+          <h1 class="text-center font-semibold pt-4 pb-8">Log in to Trello</h1>
+          <form novalidate class="space-y-4">
+            <div class="relative">
+              <input
+                class="w-full rounded bg-gray-100 border-2 border-gray-300"
+                placeholder="Enter email"
+                type="email"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div class="relative">
+              <input
+                class="w-full rounded bg-gray-100 border-2 border-gray-300"
+                placeholder="Enter password"
+                type="password"
+                name="password"
+                id="password"
+              />
+            </div>
+            <div>
+              <button
+                class="text-white w-full px-5 py-2 font-medium rounded text-sm bg-green-600"
+                type="submit"
+              >
+                Log In
+              </button>
+            </div>
+          </form>
+        </div>
+        <ul class="pt-4 pb-2 flex justify-center gap-x-2 text-sm">
+          <li>
+            <a href="#" class="text-blue-500 hover:underline">Can't log in?</a>
+          </li>
+          &bull;
+          <li>
+            <a href="#" class="text-blue-500 hover:underline">
+              Sign up for an account
+            </a>
+          </li>
+        </ul>
       </div>
+      <div class="text-xs">
+        <ul class="pt-4 pb-2 flex justify-center gap-x-2">
+          <li>
+            <a href="#" class="text-blue-500 hover:underline">Privacy Policy</a>
+          </li>
+          &bull;
+          <li>
+            <a href="#" class="text-blue-500 hover:underline">
+              Terms of Service
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="h-1/6">
+      <footer class="flex flex-col justify-center items-center pt-8">
+        <img
+          class="w-40"
+          src="/assets/images/logo/logo-atlassian-gray.png"
+          alt="logo"
+        />
+        <ul class="pt-4 pb-2 flex justify-center gap-x-4 text-sm">
+          <li>
+            <a href="#" class="text-gray-400 hover:underline">Templates</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:underline">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:underline">Apps</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:underline">Jobs</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:underline">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:underline">Developers</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:underline">About</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:underline">Help</a>
+          </li>
+        </ul>
+      </footer>
     </div>
   </div>
 </div>
