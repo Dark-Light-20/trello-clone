@@ -1,27 +1,32 @@
-<div class="w-screen h-screen bg-gray-50 relative">
-  <div class="absolute w-full h-full">
+<div class="w-screen h-screen bg-white sm:bg-gray-50 relative">
+  <div class="absolute w-full h-full hidden sm:block">
     <img
-      class="absolute w-96 left-0 bottom-0"
+      class="absolute w-64 lg:w-96 left-0 bottom-0"
       src="/assets/svg/login-bg-left.svg"
       alt="bg left"
+      loading="lazy"
     />
     <img
-      class="absolute w-96 right-0 bottom-0"
+      class="absolute w-64 lg:w-96 right-0 bottom-0"
       src="/assets/svg/login-bg-right.svg"
       alt="bg right"
+      loading="lazy"
     />
   </div>
-  <div class="relative w-4/12 h-full m-auto divide-y divide-gray-300">
+  <div
+    class="relative w-full sm:w-7/12 md:w-6/12 lg:w-4/12 h-full m-auto divide-y divide-gray-300"
+  >
     <div class="pt-6 pb-2 h-5/6">
       <header class="flex justify-center">
         <img
           class="w-56"
           src="/assets/images/logo/logo-gradient-blue-trello.png"
           alt="logo"
+          loading="lazy"
         />
       </header>
       <div
-        class="bg-white rounded shadow pt-4 pb-8 px-10 divide-y divide-gray-300"
+        class="bg-white rounded shadow-none sm:shadow-lg pt-4 pb-8 px-10 divide-y divide-gray-300"
       >
         <div class="mb-6">
           <h1 class="text-center font-semibold pt-4 pb-8">Log in to Trello</h1>
@@ -54,12 +59,15 @@
             </div>
           </form>
         </div>
-        <ul class="pt-4 pb-2 flex justify-center gap-x-2 text-sm">
+        <ul
+          class="pt-4 pb-2 flex justify-center items-center flex-col md:flex-row gap-x-2 text-sm"
+        >
           <li>
             <a href="#" class="text-blue-500 hover:underline">Can't log in?</a>
           </li>
-          &bull;
+          <span class="hidden sm:block">&bull;</span>
           <li>
+            <span class="md:hidden">&bull;</span>
             <a href="#" class="text-blue-500 hover:underline">
               Sign up for an account
             </a>
@@ -86,30 +94,31 @@
           class="w-40"
           src="/assets/images/logo/logo-atlassian-gray.png"
           alt="logo"
+          loading="lazy"
         />
-        <ul class="pt-4 pb-2 flex justify-center gap-x-4 text-sm">
-          <li>
+        <ul class="pt-4 pb-2 w-full text-center text-sm">
+          <li class="inline-block mx-2">
             <a href="#" class="text-gray-400 hover:underline">Templates</a>
           </li>
-          <li>
+          <li class="inline-block mx-2">
             <a href="#" class="text-gray-400 hover:underline">Pricing</a>
           </li>
-          <li>
+          <li class="inline-block mx-2">
             <a href="#" class="text-gray-400 hover:underline">Apps</a>
           </li>
-          <li>
+          <li class="inline-block mx-2">
             <a href="#" class="text-gray-400 hover:underline">Jobs</a>
           </li>
-          <li>
+          <li class="inline-block mx-2">
             <a href="#" class="text-gray-400 hover:underline">Blog</a>
           </li>
-          <li>
+          <li class="inline-block mx-2">
             <a href="#" class="text-gray-400 hover:underline">Developers</a>
           </li>
-          <li>
+          <li class="inline-block mx-2">
             <a href="#" class="text-gray-400 hover:underline">About</a>
           </li>
-          <li>
+          <li class="inline-block mx-2">
             <a href="#" class="text-gray-400 hover:underline">Help</a>
           </li>
         </ul>
