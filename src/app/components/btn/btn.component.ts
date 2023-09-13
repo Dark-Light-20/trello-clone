@@ -6,19 +6,22 @@ import { Component, Input } from '@angular/core';
 })
 export class BtnComponent {
   @Input() typeBtn: 'button' | 'submit' | 'reset' = 'button';
-  @Input() colorBtn: 'success' | 'primary' | 'red' = 'success';
+  @Input() color: 'success' | 'primary' | 'red' | 'sky' = 'success';
 
   get colorClasses() {
     return {
-      'bg-success-600': this.colorBtn === 'success',
-      'hover:bg-success-700': this.colorBtn === 'success',
-      'focus:ring-success-300': this.colorBtn === 'success',
-      'bg-primary-600': this.colorBtn === 'primary',
-      'hover:bg-primary-700': this.colorBtn === 'primary',
-      'focus:ring-primary-300': this.colorBtn === 'primary',
-      'bg-red-600': this.colorBtn === 'red',
-      'hover:bg-red-700': this.colorBtn === 'red',
-      'focus:ring-red-300': this.colorBtn === 'red',
+      'bg-success-600': this.color === 'success',
+      'hover:bg-success-700': this.color === 'success',
+      'focus:ring-success-300': this.color === 'success',
+      'bg-primary-600': this.color === 'primary',
+      'hover:bg-primary-700': this.color === 'primary',
+      'focus:ring-primary-300': this.color === 'primary',
+      'bg-red-600': this.color === 'red',
+      'hover:bg-red-700': this.color === 'red',
+      'focus:ring-red-300': this.color === 'red',
+      'bg-sky-600': this.color === 'sky',
+      'hover:bg-sky-700': this.color === 'sky',
+      'focus:ring-sky-300': this.color === 'sky',
     };
   }
 }
