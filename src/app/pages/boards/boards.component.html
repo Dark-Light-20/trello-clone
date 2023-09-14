@@ -28,7 +28,7 @@
       </li>
     </ul>
 
-    <div class="ps-2 mt-10">
+    <div class="ps-2 mt-10 mb-3">
       <cdk-accordion>
         <cdk-accordion-item #accordionMenu="cdkAccordionItem">
           <button
@@ -80,6 +80,26 @@
         </cdk-accordion-item>
       </cdk-accordion>
     </div>
+
+    <cdk-accordion>
+      <cdk-accordion-item
+        #accordionItem="cdkAccordionItem"
+        *ngFor="let item of items"
+      >
+        <button
+          type="button"
+          class="w-full text-left"
+          (click)="accordionItem.toggle()"
+        >
+          {{ item.label }}
+        </button>
+        <div [style.display]="accordionItem.expanded ? '' : 'none'">
+          <ul>
+            <li *ngFor="let subItem of item.items">{{ subItem.label }}</li>
+          </ul>
+        </div>
+      </cdk-accordion-item>
+    </cdk-accordion>
   </div>
   <div class="md:w-3/4 ps-2">
     <div class="flex gap-x-4 text-xl font-bold">
