@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
-import { faHouse, faClock } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHouse,
+  faClock,
+  faAngleUp,
+  faAngleDown,
+  faHeart,
+  faBorderAll,
+  faUsers,
+  faGear,
+} from '@fortawesome/free-solid-svg-icons';
 import { faElementor, faTrello } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -11,4 +20,11 @@ export class BoardsComponent {
   readonly templateIcon = faElementor;
   readonly homeIcon = faHouse;
   readonly recentIcon = faClock;
+  readonly expandedIcon = faAngleUp;
+  readonly collapsedIcon = faAngleDown;
+  readonly highlightsIcon = faHeart;
+  readonly viewsIcon = faBorderAll;
+  readonly membersIcon = faUsers;
+  readonly settingsIcon = faGear;
+
 }
