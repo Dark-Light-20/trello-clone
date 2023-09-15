@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import {
+  CdkDragDrop,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
 import { ToDo } from 'src/app/models/todo.model';
 
 @Component({
@@ -28,7 +32,19 @@ export class BoardComponent {
   done: ToDo[] = [{ id: '4', title: 'Play video games' }];
 
   drop(event: CdkDragDrop<ToDo[]>): void {
-    console.log(event);
-    moveItemInArray(this.todos, event.previousIndex, event.currentIndex);
+    if (event.previousContainer === event.container) {
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    }
   }
 }
