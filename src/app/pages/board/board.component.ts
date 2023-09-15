@@ -4,7 +4,7 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
-import { ToDo } from 'src/app/models/todo.model';
+import { Column, ToDo } from '../../models/todo.model';
 
 @Component({
   selector: 'app-board',
@@ -24,12 +24,23 @@ import { ToDo } from 'src/app/models/todo.model';
   ],
 })
 export class BoardComponent {
-  todos: ToDo[] = [
-    { id: '1', title: 'Make dishes' },
-    { id: '2', title: 'Buy unicorn' },
+  columns: Column[] = [
+    {
+      title: 'To Do',
+      todos: [
+        { id: '1', title: 'Make dishes' },
+        { id: '2', title: 'Buy unicorn' },
+      ],
+    },
+    {
+      title: 'Doing',
+      todos: [{ id: '3', title: 'Watch Angular Path in Platzi' }],
+    },
+    {
+      title: 'Done',
+      todos: [{ id: '4', title: 'Play video games' }],
+    },
   ];
-  doing: ToDo[] = [{ id: '3', title: 'Watch Angular Path in Platzi' }];
-  done: ToDo[] = [{ id: '4', title: 'Play video games' }];
 
   drop(event: CdkDragDrop<ToDo[]>): void {
     if (event.previousContainer === event.container) {
@@ -46,5 +57,12 @@ export class BoardComponent {
         event.currentIndex
       );
     }
+  }
+
+  addColumn(): void {
+    this.columns.push({
+      title: 'New Column',
+      todos: [],
+    });
   }
 }
