@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../models/product.model';
 
 @Component({
-  selector: 'app-scroll',
-  templateUrl: './scroll.component.html',
+  selector: 'app-table',
+  templateUrl: './table.component.html',
 })
-export class ScrollComponent implements OnInit {
+export class TableComponent implements OnInit {
   products: Product[] = [];
+  columns: string[] = ['#No', 'Name', 'Price', 'Cover'];
 
   constructor(private _http: HttpClient) {}
 
