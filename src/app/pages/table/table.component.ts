@@ -10,6 +10,12 @@ export class TableComponent implements OnInit {
   products: Product[] = [];
   columns: string[] = ['#No', 'Name', 'Price', 'Cover'];
 
+  get total(): number {
+    return this.products
+      .map((item) => item.price)
+      .reduce((acc, price) => acc + price);
+  }
+
   constructor(private _http: HttpClient) {}
 
   ngOnInit(): void {
