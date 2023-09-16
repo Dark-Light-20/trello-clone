@@ -70,11 +70,17 @@ export class BoardComponent {
     });
   }
 
-  openDialog(): void {
-    this._dialog.open(TodoDialogComponent, {
+  openDialog(todo: ToDo): void {
+    const dialogRef = this._dialog.open(TodoDialogComponent, {
       minWidth: '300px',
       maxWidth: '50%',
       autoFocus: false,
+      data: {
+        todo,
+      },
+    });
+    dialogRef.closed.subscribe((output) => {
+      console.log(output);
     });
   }
 }
